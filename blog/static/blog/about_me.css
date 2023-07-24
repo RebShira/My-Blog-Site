@@ -1,0 +1,101 @@
+body {
+    margin-left: 0;
+    background-image: linear-gradient(to right, white, #f0c40f);
+}
+
+img {
+    width: 400px;
+    margin-left: 50px;
+    border-right: 5px solid #f0c40f;
+    border-bottom: 5px solid #f0c40f;
+	-moz-box-shadow:4px 4px 5px #888888;
+	-ms-box-shadow: 4px 4px 5px #888888;
+	-webkit-box-shadow: 4px 4px 5px #888888;
+	-o-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a div {
+    background-color: #245d0d;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 10em;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.anchor {
+    width: 15em;
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: #FDFDE6;
+}
+
+.icon-image {
+    width: 10rem;
+    margin: 10px 10px 50px 10px;
+}
+
+#welcome {
+    background-color: #245d0d;
+    padding-top: 70px;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    width: 30%;
+    margin: 20px 10px 10px 10px;
+}
+
+.section-scroll {
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 5em;
+}
+
+#scrollable {
+    height: 50rem;
+    overflow-y: scroll;
+    background-color: #FDFDE6;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+}
+
+#scrollable h2, h3, p {
+    font-family: Arial;
+}
+
+#scrollable h3 {
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+#scrollable img {
+    width: 400px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+    margin-left: 30px;
+}
+
+.end {
+    margin-left: 10rem;
+    width: 20%;
+}

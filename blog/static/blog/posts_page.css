@@ -1,0 +1,113 @@
+img {
+    width: 140px;
+    height: auto;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
+
+h1 {
+    margin-left: 0px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid yellow;
+	border-right: 2px solid yellow;
+	width: 20rem;
+	-moz-box-shadow:4px 4px 5px #888888;
+	-ms-box-shadow: 4px 4px 5px #888888;
+	-webkit-box-shadow: 4px 4px 5px #888888;
+	-o-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+}
+
+h2 {
+    margin-left: 25px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid yellow;
+	border-right: 2px solid yellow;
+	width: 20rem;
+	-moz-box-shadow:4px 4px 5px #888888;
+	-ms-box-shadow: 4px 4px 5px #888888;
+	-webkit-box-shadow: 4px 4px 5px #888888;
+	-o-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+}
+
+.category {
+  font-family: 'Pacifico', sans-serif;
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, white, #f0c40f);
+  padding: 5px 5px;
+  width: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+li {
+    float: left;
+    margin-right: 30px;
+}
+
+.post {
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: white;
+	padding: 0 2rem;
+	margin: 10px 10px;
+}
+
+.post_content {
+    width: auto;
+    height: 8rem;
+    max-height: 150px;
+}
+
+.post_content p {
+    max-width: 170px;
+    font-size: 12px;
+}
+
+.post_img {
+    width: auto;
+    height: 200px;
+}
+
+.post_img:hover {
+    transform: scale(1.1);
+}
+
+#welcome {
+    background-color: #245d0d;
+    padding-left: 10rem;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+#all-posts {
+    padding-left: 10rem;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+.separate-row {
+    display: inline-block;
+    vertical-align: top;
+    width: 90%;
+    margin-bottom: 20px;
+    background-color: black;
+}

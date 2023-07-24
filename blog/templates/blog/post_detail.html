@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post_detail.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<section id="welcome">
+</section>
+
+<section id="summary">
+    <h2>{{ post.title }}</h2>
+    <div class="tag-area">
+        {% for tag in post_tags %}
+        <span class="tag">{{ tag.caption }} </span>
+        {% endfor %}
+    </div>
+    <div id="read-later">
+        <form action="{% url 'read-later' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="{{ post.id }}" name="post_id">
+            <button>
+                {% if saved_for_later %}
+                    Remove From Read Later
+                {% else %}
+                    Read Later
+                {% endif %}
+            </button>
+        </form>
+    </div>
+    <article>
+        <img src="{{ post.image.url }}" alt="{{post.title}}" />
+        <address>By: <a href="mailto:{{post.author.email}}?subject=Your Post on Andrew's Blog: {{post.title}}">{{ post.author|title }}</a></address>
+        <div>
+            Last updated on: <time>{{ post.date|date:"d M Y" }}</time>
+        </div>
+
+    </article>
+</section>
+
+{% if comment_form.errors %}
+<div>
+    <h2>Saving the comment failed!</h2>
+    <p>Please see comment form below.</p>
+    <a href="#comment-area">FIX!</a>
+</div>
+{% endif %}
+
+<div id="main-content">
+    {{ post.content | linebreaks }}
+</div>
+
+<div class="container">
+    <div class="comment-area">
+        <h2>What do you think?</h2>
+        <form action="{% url 'post_detail' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% for form_field in comment_form %}
+            <div class="form-control">
+                {% if form_field.errors %}
+                invalid
+                {% endif %}
+                {{ form_field.label_tag }}
+                {{ form_field }}
+                {{ form_field.errors }}
+            </div>
+            {% endfor %}
+            <button>Save Comment</button>
+        </form>
+    </div>
+
+    <div class="comment-section">
+        <h2>Posted Comments</h2>
+        <div class="scroll comments">
+            <ul>
+                {% for comment in comments %}
+                <li><em>{{ comment.text|linebreaks }}</em><br>
+                    {{ comment.user_name }}<br>Added: {{ comment.created }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

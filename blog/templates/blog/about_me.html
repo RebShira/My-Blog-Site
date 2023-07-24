@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+About Me
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/about_me.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<section id="welcome">
+</section>
+
+<div id="container">
+
+    <section class="section">
+        <img src="{% static 'blog/images/Avi_Prof_Pic.jpg' %}">
+    </section>
+
+    <section class="section-scroll">
+        <div id="scrollable">
+            <h2>Summary</h2>
+            <h3>Developer from Childhood</h3>
+            <p>I've been coding since I was 9 years old!</p>
+            <p>I have been a professional developer for the past 20 years.
+            My experience has been largely Data Analysis, including MSSQL, SAP Crystal Reports, and Excel/VBA.
+            I have worked across sectors - Government, Finance, Non-profit and Telecommunications - among others.
+            <p>My focus, as of late, has been Web Development, Python and Django. I have been using these technologies heavily within the past 5 years.
+            It is my goal to grow in experience as a Full Stack Web Developer.</p>
+            <p>Over the course of my career, I have proven myself as a team player who is able to work with and support various levels of staff.
+                As an experienced developer in a business environment, I strive to provide efficient and effective results
+                (data analysis and reporting) in response to the needs of my end users.</p>
+            <p>Below is a list of skills I have used in my work. I am also continually learning, so these skills will update in the near future.</p>
+            <hr>
+            <h3>Skills</h3>
+            <p>Languages</p>
+            <ul>
+                <li>Python 3.6.1 – Django, NumPy, Pandas, SQLAlchemy,  OpenPyXl</li>
+                <li>HTML5, CSS3, Bootstrap, Javascript</li>
+                <li>T-SQL (Stored Procedures, Functions, Cursors, Dynamic SQL. Latest: 2016)</li>
+                <li>VBA Excel</li>
+            </ul>
+            <p>Software</p>
+            <ul>
+                <li>PyCharm, Anaconda (Jupyter Notebook)</li>
+                <li>SQL Server Management Studio (latest: v18.12.1)</li>
+                <li>Crystal Reports</li>
+            </ul>
+            <p>DBMS</p>
+            <ul>
+                <li>SQL Server (2008R2, 2012, 2014, 2016) SSMS,  SSIS</li>
+                <li>Oracle (11g)</li>
+            </ul>
+            <p>Other Skills</p>
+            <ul>
+                <li>Technical Writing</li>
+                <li>Business requirements analysis</li>
+                <li>Training Documentation</li>
+                <li>Coordinate, structure, and drive business requirements meetings. Work with cross-functional teams.</li>
+                <li>Experience working with various levels of management and employees, across many sectors,
+                    including government, fashion, finance, and pharmaceuticals.</li>
+            </ul>
+            <hr>
+            <h2>Udemy Course Completions</h2>
+            <h3>I am continuously learning on Udemy. This most certainly will be updated.</h3>
+            <p>(Avi was a nickname of mine.)</p>
+            <img src="{% static 'blog/images/Django 3 - Full Stack Websites with Python Web Development.jpg' %}">
+            <img src="{% static 'blog/images/Python Django - Practical Guide.jpg' %}">
+            <img src="{% static 'blog/images/Mastering Crystal Reports 2011 Made Easy Training Tutorial.jpg' %}">
+            <img src="{% static 'blog/images/Advanced Crystal Reports 2011 Training Video.jpg' %}">
+        </div>
+    </section>
+
+    <section class="section end">
+        <div class="anchor">
+            <a href = "{% static 'blog/AJaman Resume - 2023.docx' %}"><div>Download Resume</div><img class="icon-image" src="{% static 'blog/images/ResumeImage.png' %}"></a><br>
+            <a href = "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><div>LinkedIn</div>
+                <img class="icon-image" src="{% static 'blog/images/LinkedIn.png' %}"></a>
+            <a href = "" target="_blank"><div>UpWork (coming soon)</div>
+            <img class="icon-image" src="{% static  'blog/images/UpWork.png' %}"></a>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

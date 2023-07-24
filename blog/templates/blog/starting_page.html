@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+My Blog
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/starting_page.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/KTS.png' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/Andrew 1 - Large.jpg' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/python logo 2.png' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/django.png' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/Avi Teen Large.jpg' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/sheviti.jpg' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/Avi - Double Neck.jpg' %}" alt="Andrew - The Author of This Blog">
+            <img src="{% static 'blog/images/MSSQL.png' %}" alt="Andrew - The Author of This Blog">
+            <p class="p_center"><marquee>Hello! I'm Andrew and I love to blog about Guitar, Spirituality, Tech Stuff, and other cool things.</marquee></p>
+        </header>
+
+    </section>
+
+    <section id="latest-posts">
+        <header>
+        <h1>My Latest Thoughts</h1>
+        </header>
+        <ul>
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+    <p/>
+<!--    <section id="about">-->
+<!--        <h1>-->
+<!--            "So... what is it you do?"-->
+<!--        </h1>-->
+<!--        <p>-->
+<!--            I love programming, learning & playing guitar (when I have time), meditation, Torah, and deep meaningful conversations.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            My goal is to keep on growing as a developer, and achieve communion with The Divine.-->
+<!--        </p>-->
+<!--    </section>-->
+
+{% endblock %}

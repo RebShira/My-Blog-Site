@@ -1,0 +1,13 @@
+<li>
+  <article class="post">
+    <!--{{post.post_category}}-->
+    <a href="{{ post.get_absolute_url }}">
+    <img class="post_img" src="{{ post.image.url }}" alt="{{ post.title }}" />
+    <div class="post_content">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.excerpt }}</p>
+    </div>
+    </a>
+  </article>
+</li>
+
