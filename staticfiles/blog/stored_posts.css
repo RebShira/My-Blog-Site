@@ -1,0 +1,52 @@
+#page_header {
+    margin: 3rem auto 3rem auto;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid yellow;
+	border-right: 2px solid yellow;
+	width: 20rem;
+	-moz-box-shadow:4px 4px 5px #888888;
+	-ms-box-shadow: 4px 4px 5px #888888;
+	-webkit-box-shadow: 4px 4px 5px #888888;
+	-o-box-shadow: 4px 4px 5px #888888;
+	box-shadow: 4px 4px 5px #888888;
+}
+
+#welcome {
+    background-color: green;
+    padding-left: 10rem;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+#stored-posts {
+    margin: 3rem auto 3rem auto;
+    padding: 2rem;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 30rem;
+}
+
+#stored-posts ul {
+    list-style: none;
+}
+
+#stored-posts li {
+    margin: 1rem;
+}
+
+#stored-posts a {
+    border: 1px solid #ccc;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: #1b1b1b;
+    font-weight: bold;
+}
+
+#stored-posts a:hover,
+#stored-posts a:active {
+    background-color: #ccc;
+}
